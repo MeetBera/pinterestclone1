@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background-color: #fff;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 17px;
+            font-weight: 600;
+            color: #E60023;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            margin-right: 20px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .auth {
+            display: flex;
+        }
+
+        .auth button {
+            width: 80px;
+            margin-left: 10px;
+            background-color: #E60023;
+            font-size: 14px;
+            font-weight: 600;
+            border: none;
+            color: white;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        .login {
+            padding: px;
+        }
+
+        .signup {
+            padding: 10px;
+        }
+
+        
+        #page1 {
+            height: 100vh;
+            width: 100%;
+        }
+
+        #page1 h1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            font-weight: 700;
+            color: #e60023;
+        }
+
+        #Cards {
+            margin-top: 50px;
+            padding: 20px;
+            min-height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .box {
+            position: relative;
+            height: 280px;
+            width: 380px;
+            overflow: hidden;
+            border-radius: 30px;
+            margin: 10px;
+        }
+        .box h2{
+            position: absolute;
+            margin-bottom: 80px;
+            width: 100%;
+            bottom: 0;
+            font-weight: 500;
+            font-size: 15px;
+            color: white;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .box p{
+            position: absolute;
+            margin-bottom: 8px;
+            width: 100%;
+            bottom: 0;
+            font-weight: 500;
+            font-size: 25px;
+            color: white;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .box img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        #card1 {
+            display: flex;
+        }
+
+        #card2 {
+            display: flex;
+        }
+
+        #card3 {
+            margin-top: 100px;
+            text-align: center;
+        }
+
+        .check-icon {
+            font-size: 32px;
+            color: rgb(0, 0, 0);
+            margin-bottom: 10px;
+            
+        }
+
+        #card3 h2 {
+            margin-bottom: 10px;
+        }
+
+        #card3 p {
+            padding: 10px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        #card3 button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #c5c5c5;
+            color: rgb(0, 0, 0);
+            border: none;
+            border-radius: 50px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <svg fill="#e60023" class="w-10" height="24" width="24" viewBox="0 0 24 24" aria-hidden="true"
+                    aria-label="" role="img">
+                    <path
+                        d="M0 12a12 12 0 0 0 7.73 11.22 12 12 0 0 1 .03-3.57l1.4-5.94S8.8 13 8.8 11.94c0-1.66.96-2.9 2.16-2.9 1.02 0 1.51.77 1.51 1.68 0 1.03-.65 2.56-.99 3.98-.28 1.19.6 2.16 1.77 2.16 2.12 0 3.76-2.24 3.76-5.47 0-2.86-2.06-4.86-5-4.86a5.17 5.17 0 0 0-5.39 5.18c0 1.03.4 2.13.9 2.73q.12.17.08.34l-.34 1.36q-.06.31-.4.16c-1.49-.7-2.42-2.88-2.42-4.63 0-3.77 2.74-7.23 7.9-7.23 4.14 0 7.36 2.95 7.36 6.9 0 4.12-2.6 7.43-6.2 7.43-1.21 0-2.35-.63-2.74-1.37l-.74 2.84a14 14 0 0 1-1.55 3.23A12 12 0 1 0 0 12">
+                    </path>
+                </svg>
+            <h1>Pinterest</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Today</a></li>
+                <li><a href="homewatch.html">watch</a></li>
+                <li><a href="homeExplore.html">Explore</a></li>
+            </ul>
+        </nav>
+        <div class="auth">
+            <button class="login">Log in </button>
+            <button class="signup">Sign up</button>
+        </div>
+    </header>
+    <div id="page1">
+        <h1>Stay Inspired</h1>
+        <div id="Cards">
+            <div id="card1">
+                <div class="box">
+                    <img src="https://i.pinimg.com/736x/af/88/50/af885079ede1cafcc58e6b755cbe8367.jpg" alt="">
+                    <h2>NY, London, Paris & Milan</h2>
+                    <p>International street style we're loving</p>
+                </div>
+                <div class="box">
+                    <img src="https://i.pinimg.com/736x/6a/c9/b4/6ac9b41292a0076248ed05bc9ac84a95.jpg" alt="">
+                    <h2>Extra glowy festive szn</h2>
+                    <p>Diwali gifts for beauty lovers <br><br></p>
+                </div>
+                <div class="box">
+                    <img src="https://i.pinimg.com/736x/f1/ec/84/f1ec844119d29c88d75cde61103bc375.jpg" alt="">
+                    <h2>Positive pick-me-ups</h2>
+                    <p>Feel-good quotes and wallpapers <br><br></p>
+                </div>
+            </div>
+            <div id="card2">
+                <div class="box">
+                    <img src="https://i.pinimg.com/736x/9e/7e/d7/9e7ed7190e78e968afac9851049b2823.jpg" alt="">
+                    <h2>Mindful gifting</h2>
+                    <p>Wellness gifts for the festive season</p>
+                </div>
+                <div class="box">
+                    <img src="https://i.pinimg.com/736x/83/57/0e/83570ebc7258b5f208e530fb1394534b.jpg" alt="">
+                    <h2>Festive gift guide</h2>
+                    <p>Home decor gifts for Diwali <br><br></p>
+                </div>
+                <div class="box">
+                    <img src="https://i.pinimg.com/736x/bf/39/cc/bf39cc6295c79a5bb38cd42051dc6137.jpg" alt="">
+                    <h2>Baaraati special</h2>
+                    <p>Take these cool wedding guest photos</p>
+                </div>
+            </div>
+            <div id="card3">
+                <div class="check-icon"><i class="ri-checkbox-circle-fill"></i></div>
+                <h2>That's all for today!</h2>
+                <p>Come back tomorrow for more inspiration</p>
+                <button >Go to home feed</button>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

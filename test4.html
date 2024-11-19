@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pinterest Login</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+        }
+
+        .login-box {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 350px;
+        }
+
+        .logo {
+            width: 50px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 22px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .input-field {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .input-field input {
+            width: 100%;
+            padding: 10px 15px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        .input-field input:focus {
+            border-color: #e60023;
+        }
+
+        .toggle-password {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+
+        .forgot-password {
+            display: block;
+            margin-bottom: 20px;
+            text-decoration: none;
+            color: #555;
+            font-size: 14px;
+        }
+
+        .forgot-password:hover {
+            text-decoration: underline;
+        }
+
+        .login-btn {
+            background-color: #e60023;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            width: 100%;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .login-btn:hover {
+            background-color: #cc001f;
+        }
+
+        button {
+            font-size: 16px;
+            padding: 10px 15px;
+            width: 100%;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .login-facebook {
+            background-color: #3b5998;
+            color: white;
+        }
+
+        .login-facebook:hover {
+            background-color: #334d84;
+        }
+
+        .login-google {
+            background-color: #db4437;
+            color: white;
+        }
+
+        .login-google:hover {
+            background-color: #c33d2e;
+        }
+
+        .terms {
+            font-size: 12px;
+            color: #777;
+            margin-top: 20px;
+        }
+
+        .terms a {
+            color: #e60023;
+            text-decoration: none;
+        }
+
+        .terms a:hover {
+            text-decoration: underline;
+        }
+
+        .signup {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        .signup a {
+            color: #e60023;
+            text-decoration: none;
+        }
+
+        .signup a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <img src="pinterest-logo.png" alt="Pinterest Logo" class="logo">
+            <h2>Welcome to Pinterest</h2>
+            <form>
+                <div class="input-field">
+                    <input type="email" id="email" placeholder="Email" required>
+                </div>
+                <div class="input-field">
+                    <input type="password" id="password" placeholder="Password" required>
+                    <span class="toggle-password">&#128065;</span>
+                </div>
+                <a href="#" class="forgot-password">Forgot your password?</a>
+                <button type="submit" class="login-btn">Log in</button>
+            </form>
+            <p>OR</p>
+            <button class="login-facebook">Continue with Facebook</button>
+            <button class="login-google">Continue with Google</button>
+            <p class="terms">
+                By continuing, you agree to Pinterest's <a href="#">Terms of Service</a> and acknowledge you've read our <a href="#">Privacy Policy</a>.
+            </p>
+            <p class="signup">Not on Pinterest yet? <a href="#">Sign up</a></p>
+        </div>
+    </div>
+</body>
+</html>

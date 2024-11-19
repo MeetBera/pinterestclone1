@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Layout</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    .profile-container {
+      width: 80%;
+      margin: 50px auto;
+      text-align: center;
+    }
+
+    .profile-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .profile-picture {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background-color: #ddd;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 36px;
+      margin-right: 20px;
+    }
+
+    .profile-details {
+      text-align: left;
+    }
+
+    .profile-details h1 {
+      margin: 0;
+    }
+
+    .profile-details p {
+      color: #888;
+      margin: 5px 0;
+    }
+
+    .share-btn,
+    .edit-btn {
+      background-color: #eee;
+      border: none;
+      padding: 10px 15px;
+      margin: 5px;
+      cursor: pointer;
+    }
+
+    .profile-navigation {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .nav-btn {
+      background-color: #f0f0f0;
+      border: none;
+      padding: 10px 20px;
+      margin: 0 5px;
+      cursor: pointer;
+    }
+
+    .nav-btn.active {
+      background-color: #ddd;
+    }
+
+    .saved-pins {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    .pin {
+      width: 200px;
+      height: 300px;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+
+    .pin img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .pin:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="w-full min-h-screen">
+    <div class="navigation relative z-[333] w-full px-5 py-5 flex items-center gap-5 ">
+      <div class="logo">
+        <svg fill="#e60023" class="w-10" height="24" width="24" viewBox="0 0 24 24" aria-hidden="true" aria-label=""
+          role="img">
+          <path
+            d="M0 12a12 12 0 0 0 7.73 11.22 12 12 0 0 1 .03-3.57l1.4-5.94S8.8 13 8.8 11.94c0-1.66.96-2.9 2.16-2.9 1.02 0 1.51.77 1.51 1.68 0 1.03-.65 2.56-.99 3.98-.28 1.19.6 2.16 1.77 2.16 2.12 0 3.76-2.24 3.76-5.47 0-2.86-2.06-4.86-5-4.86a5.17 5.17 0 0 0-5.39 5.18c0 1.03.4 2.13.9 2.73q.12.17.08.34l-.34 1.36q-.06.31-.4.16c-1.49-.7-2.42-2.88-2.42-4.63 0-3.77 2.74-7.23 7.9-7.23 4.14 0 7.36 2.95 7.36 6.9 0 4.12-2.6 7.43-6.2 7.43-1.21 0-2.35-.63-2.74-1.37l-.74 2.84a14 14 0 0 1-1.55 3.23A12 12 0 1 0 0 12">
+          </path>
+        </svg>
+      </div>
+      <div class="links flex gap-5">
+        <a id="home" class="whitespace-nowrap font-semibold" href="home.html">Home</a>
+        <a id="home" class="whitespace-nowrap font-semibold" href="index.html">Main</a>
+        <a class="whitespace-nowrap font-semibold" href="explore.html">Explore</a><a
+          class="whitespace-nowrap font-semibold" href="create.html">Create <i class="ri-arrow-down-s-line"></i></a>
+      </div>
+      <div class="inputcontainer flex w-full rounded-full bg-zinc-200">
+        <div class="input w-full relative group">
+          <div
+            class="hidden searchdata w-[98%] min-h-20 bg-white absolute top-full left-1/2 -translate-x-1/2 rounded-md py-3">
+
+          </div>
+          <input id="searchinput" type="text"
+            class="bg-transparent outline-none px-5 font-semibold w-full py-3 rounded-full" placeholder="Search">
+          <i
+            class="absolute top-1/2 right-3 hidden group-focus:block text-zinc-500 text-xl -translate-y-1/2 ri-close-line"></i>
+        </div>
+        <button
+          class="whitespace-nowrap px-5 rounded-full font-semibold hover:bg-zinc-300 text-sm border-l-2 border-zinc-300">All
+          Pins <i class="ri-arrow-down-s-line"></i></button>
+      </div>
+      <div class="iconsnpic flex gap-6 items-center">
+        <i class="text-2xl text-zinc-500 ri-notification-3-fill"></i>
+        <i class="text-2xl text-zinc-500 ri-message-3-fill"></i>
+        <div class="pic flex items-center gap-4">
+          <div class="w-8 h-8 bg-zinc-400 rounded-full overflow-hidden">
+            <div class="avatar w-8 h-8 bg-gray-300 rounded-full flex items-center justify-center">E</div>
+          </div>
+          <i class="ri-arrow-down-s-line"></i>
+        </div>
+      </div>
+    </div>
+    <div class="profile-container">
+      <div class="profile-header">
+        <div class="profile-picture">E</div>
+        <div class="profile-details">
+          <h1>Email Ccc</h1>
+          <p>emailccc0684</p>
+          <button class="share-btn">Share</button>
+          <button class="edit-btn">Edit profile</button>
+        </div>
+      </div>
+      <div class="profile-navigation">
+        <button class="nav-btn active">Created</button>
+        <button class="nav-btn">Saved</button>
+      </div>
+      <div class="saved-pins">
+
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+  <script>
+    const navButtons = document.querySelectorAll('.nav-btn');
+
+    navButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        navButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+      });
+    });
+
+    
+  </script>
+</body>
+
+</html>
